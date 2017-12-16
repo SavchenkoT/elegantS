@@ -1,0 +1,110 @@
+@import "variables";
+@import "mixins";
+
+
+html {
+    font-size: $font-size-lg;
+    box-sizing: border-box;
+
+    @include respond-to(wide-screens) {
+      font-size: $font-size-default;
+    }
+
+    @include respond-to(medium-screens) {
+        font-size: $font-size-md;
+    }
+
+    @include respond-to(tablets) {
+        font-size: $font-size-xs;
+    }
+
+    @include respond-to(handhelds) {
+        font-size: $font-size-xxs;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    color: #021725;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+
+    @include respond-to(medium-screens) {
+        padding-bottom: 0;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    > .container {
+        max-width: 770px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__min-text {
+        font-size: 1rem;
+        color: #d4af37;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../img/animated-bg.png');
+        background-size: cover;
+        padding: 0 15px;
+
+        &-text {
+            font-size: 5.7rem;
+            font-weight: 100;
+            text-align: center;
+
+            @include respond-to(wide-screens) {
+                font-size: 5rem;
+             }
+
+            @include respond-to(medium-screens){
+                font-size: 3.5rem;
+            }
+
+            @include respond-to(handhelds) {
+                font-size: 3rem;
+            }
+
+            span {
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        text-align: center;
+    }
+}
