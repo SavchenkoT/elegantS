@@ -108,11 +108,14 @@ header {
     }
 
     &__items {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        &-photo-block {
 
+        &__container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        &-photo {
             $photo-dimensions: 300px;
             width: $photo-dimensions;
             min-width: $photo-dimensions;
