@@ -85,6 +85,18 @@ header {
     color: inherit;
     padding: 25px 50px;
     border: 1px solid black; }
+  .main__items {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    .main__items-photo-block {
+      width: 300px;
+      min-width: 300px;
+      height: 300px;
+      overflow: hidden; }
+      .main__items-photo-block img {
+        width: 100%;
+        height: 100%; }
 
 .title {
   display: flex;
