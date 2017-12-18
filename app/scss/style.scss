@@ -133,7 +133,7 @@ header {
     }
 }
 .container {
-    max-width: 770px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -156,7 +156,8 @@ footer {
 .footer {
     display: flex;
     justify-content: space-between;
-    font-size: $font-size-lg;
+    align-items: center;
+    font-size: $font-size-default;
     padding: 2rem 1rem;
 
     @include respond-to(tablets) {
@@ -165,13 +166,46 @@ footer {
     }
 
     @include respond-to(handhelds) {
-
         justify-content: center;
         align-items: center;
     }
 
     &__copy {
-        margin-bottom: 1rem;
+        @include respond-to(tablets) {
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            color: grey;
+            font-size: 1.1rem;
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 0 4px;
+            transition: transform .3s;
+            .fa {
+                transition: color .3s;
+            }
+
+            &:hover, &:focus {
+                text-decoration: none;
+                color:#d4af37;
+                background: #eee;
+                transform: scale(1.2);
+                border: 1px solid #d4af37;
+            }
+        }
     }
 
     &__contact {
