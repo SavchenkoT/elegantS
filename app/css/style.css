@@ -23,6 +23,18 @@ html {
 *, *::before, *::after {
   box-sizing: inherit; }
 
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+
+a {
+  text-decoration: none; }
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none; }
+
 body {
   position: relative;
   min-height: 100vh;
@@ -75,11 +87,36 @@ header {
     padding: 3.8rem 0;
     font-weight: 300; }
   .main__link {
+    color: #80affb;
     display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    padding: 2rem 3.8rem;
-    border: 1px solid black; }
+    text-transform: uppercase;
+    letter-spacing: 2.1px;
+    border-radius: 27px;
+    border: 2px solid #80affb;
+    box-shadow: 5px 8.66px 20px 0px rgba(68, 84, 255, 0.078);
+    padding: 14px 61px;
+    position: relative;
+    transition: all 400ms linear 0s;
+    z-index: 2;
+    transform: scale(0.8); }
+    .main__link:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 0px;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.3);
+      transition: all .4s ease; }
+    .main__link:hover {
+      color: #fff;
+      border: 2px solid rgba(0, 0, 0, 0.3);
+      transform: scale(0.85); }
+    .main__link:hover::before {
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      z-index: -1;
+      border-radius: 27px; }
   .main__items-content {
     display: flex;
     justify-content: center;
